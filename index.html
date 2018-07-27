@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variety</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Sans:400,700|Quicksand:300,400|Rokkitt:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+	<h1>LOGO</h1>
+	<nav>
+		<ul>
+			<li><a href="#">START</a></li>
+			<li><a href="#aboutMe">ABOUT ME</a></li>
+			<li><a href="#work">WORK</a></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<section id="landing">
+		<h1>May I introduce myself?</h1>
+		<hr/>
+		<h2>Frontend Designer | UI/UX  Design</h2>
+	</section>
+	<button type="button" id="goAhead">GO AHEAD</button>
+	<section id="aboutMe">
+		<h1>RAPHAEL LECHNER.</h1>
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+		<div>
+			<div>
+				<img src="./media/pencil.png" alt="sketching icon">
+				<h2>Sketching is fun</h2>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+			</div>
+			<div>
+				<img src="./media/target.png" alt="design icon">
+				<h2>Design afterwords</h2>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+			</div>
+			<div>
+				<img src="./media/fingerprint.png" alt="finalize icon">
+				<h2>Finalize</h2>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section id="work">
+		<div>
+			<div>
+				<img src="./media/flower1.png" alt="red flower">
+			</div>
+			<div>
+				<img src="./media/flower2.png" alt="pink flower" class="detail">
+				<button><img src="./media/search.png" alt="zoom"></button>
+				<div>
+					<h1>Lorem ipsum dolor sit</h1>
+					<h2>amet consetetur sadipscing elitr</h2>
+				</div>
+			</div>
+			<div>
+				<img src="./media/flower3.png" alt="long flower">
+			</div>
+			<div>
+				<img src="./media/flower4.png" alt="ball flower">
+			</div>
+		</div>
+		<button type="button" id="viewMore">
+			VIEW MORE
+			<svg id="i-arrow-right" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+				<path d="M22 6 L30 16 22 26 M30 16 L2 16"></path>
+			</svg>
+		</button>
+	</section>
+	<hr/>
+	<section id="contact">
+		<h1>Get in touch!</h1>
+		<forum>
+			<input type="text" placeholder="Name"/>
+			<input type="email" placeholder="Email">
+			<textarea placeholder="How can I help you?"></textarea>
+			<button type="submit">Send</button>
+		</forum>
+	</section>
+</main>
+
+<footer>
+	<div>
+		<a href="#"><img src="./media/twitter.png" alt="twitter icon"></a>
+		<a href="#"><img src="./media/dribbble.png" alt="dribbble icon"></a>
+		<a href="#"><img src="./media/facebook.png" alt="facebook icon"></a>
+	</div>
+	<span>
+		<span>Design &copy; Raphael Lechner</span>
+		<span>Code by Glenn Madsen</span>
+	</span>
+</footer>
+
+
+
+
+
+<img src="./media/template.png" alt="template" id="template">
+<feildset id="tempSet">
+	<label for="opacity">Template Opacity</label>
+	<input type="range" name="opacity" id="opacity" min="0" max="1" step="0.01"/>
+</feildset>
+<style>
+	#template {
+		display: block;
+		z-index: 10000;
+		position: absolute;
+		top: 0;
+		right: calc(50% - 600px);
+		left:  calc(50% - 600px);
+		opacity: .5;
+	}
+	#tempSet {
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+		background: rgba(255,255,255,.2);
+		border-radius: 100rem;
+		border: 1px solid rgba(0,0,0,.2);
+		padding: .5rem .25rem .25rem .5rem;
+		z-index: 1000000;
+	}
+	#tempSet > input {
+		vertical-align: middle;
+	}
+</style>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		document.querySelector('#opacity').onchange=function (event) {
+			if (event.target.value < 0.05) {
+				document.querySelector("#template").style.display="none";
+			} else {
+				document.querySelector("#template").style.display="block";
+			}
+			document.querySelector("#template").style.opacity = event.target.value;
+		};
+	}, false);
+</script>
+
+</body>
+</html>

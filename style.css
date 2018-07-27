@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+}
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3.3rem;
+  overflow: hidden;
+  max-width: 60rem;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  z-index: 1;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #fff;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header a:hover::after {
+  opacity: 1;
+}
+header a::after {
+  transition: opacity ease .5s;
+  content: "";
+  position: relative;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #fff;
+  opacity: 0;
+}
+header h1,
+header li {
+  font-size: 1.1rem;
+}
+header > h1 {
+  margin: 0;
+  float: left;
+}
+header > nav {
+  float: right;
+}
+header > nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 18.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: flex-start;
+}
+#landing {
+  background: url("media/flowers.png") center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+#landing > h1 {
+  font-family: 'Rokkitt', serif;
+  font-weight: 300;
+  font-size: 3.35rem;
+  margin: 0;
+}
+#landing > h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: .5rem 0 10.5rem 0;
+  letter-spacing: -0.5px;
+}
+#landing > hr {
+  width: 38rem;
+  height: 1px;
+  background-color: white;
+  border: none;
+}
+button {
+  font-family: 'Rokkitt', serif;
+  border: 6px rgba(155, 89, 182, 0.59) solid;
+  background-clip: padding-box !important;
+  padding: .3125rem 50px;
+  background: #9b59b6;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  z-index: 1;
+  transition: border-color ease 0.25s;
+}
+button:hover {
+  outline: none;
+  border-color: #9b59b6;
+  cursor: pointer;
+}
+#goAhead {
+  position: relative;
+  top: calc(-2.1875rem/2);
+}
+#aboutMe {
+  font-family: 'PT Sans', sans-serif;
+  padding: 4rem 0;
+}
+#aboutMe > h1 {
+  font-weight: 700;
+  font-size: 2.35rem;
+  color: #9b59b6;
+}
+#aboutMe > h1,
+#aboutMe > p {
+  text-align: center;
+}
+#aboutMe > p {
+  color: #95a5a6;
+  max-width: 49rem;
+  margin: 0 auto;
+  font-size: 1.07rem;
+  line-height: 1.8rem;
+  padding-top: 5px;
+}
+#aboutMe > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.5rem 0 0 0;
+  max-width: 60rem;
+  margin: 0 auto;
+  width: 90%;
+}
+#aboutMe > div > div {
+  max-width: 15.5rem;
+}
+#aboutMe > div > div > img {
+  display: block;
+  margin: 0 auto;
+}
+#aboutMe > div > div > h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #9b59b6;
+  margin: 1.6rem 0;
+}
+#aboutMe > div > div > p {
+  text-align: justify;
+  color: #95a5a6;
+  line-height: 1.8rem;
+  letter-spacing: -1px;
+  margin: 0;
+}
+main > hr {
+  max-width: 60rem;
+  height: 1px;
+  background-color: #95a5a6;
+  border: none;
+  margin: .25rem auto;
+}
+#work {
+  max-width: 60rem;
+  width: 90%;
+  margin: 0rem auto;
+  font-family: 'Rokkitt', serif;
+  color: #fff;
+}
+#work > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding-top: 4.35rem;
+}
+#work > div > div {
+  margin-bottom: 3.4rem;
+  width: 25rem;
+  height: 18.75rem;
+  position: relative;
+}
+#work > div > div > img {
+  width: 25rem;
+  height: 18.75rem;
+}
+#work > div > div > img:not(.detail) {
+  filter: opacity(0.5);
+}
+#work > div > div > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 1.25rem;
+  overflow: hidden;
+}
+#work > div > div > button > img {
+  padding: 11px;
+  display: block;
+}
+#work > div > div > div {
+  background-color: #9b59b6;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 6px rgba(155, 89, 182, 0.59) solid;
+  background-clip: padding-box;
+}
+#work > div > div > div > h1 {
+  font-size: 1.75rem;
+  word-spacing: -3px;
+  margin: 1rem 0 0 1.2rem;
+}
+#work > div > div > div > h2 {
+  color: #6b3f7d;
+  font-family: 'Myriad Pro', 'PT Sans', sans-serif;
+  font-size: 1rem;
+  margin: 0 0 1.2rem 1.2rem;
+}
+#viewMore {
+  margin: 1.3rem auto 4.65rem auto;
+  padding: .45rem 1.1rem;
+  font-size: 1.5rem;
+}
+#viewMore > svg {
+  vertical-align: middle;
+}
+#contact > h1 {
+  text-align: center;
+  font-family: 'Rokkitt', serif;
+  font-size: 3.35rem;
+  margin: 4rem 0 0 0;
+  word-spacing: -3px;
+  color: #9b59b6;
+}
+#contact > forum {
+  max-width: 48rem;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  margin: 3.675rem auto 0 auto;
+}
+#contact > forum > input {
+  font-family: 'Rokkitt', serif;
+  border: none;
+  margin: 0;
+  width: 19.5rem;
+  font-size: 2rem;
+  padding: 1rem 1.75rem;
+  letter-spacing: -2px;
+  color: #FFF;
+  background-color: #e4e8e8;
+}
+#contact > forum > textarea {
+  font-family: 'Rokkitt', serif;
+  font-size: 1.75rem;
+  margin-top: 1.9rem;
+  width: 100%;
+  height: 12.6rem;
+  padding: 1.5rem 1.75rem;
+  border: none;
+  resize: none;
+  word-spacing: -1px;
+  color: #FFF;
+  background-color: #e4e8e8;
+}
+#contact > forum > button {
+  margin: 1.9rem auto;
+}
+#contact > forum > input,
+#contact > forum > textarea {
+  caret-color: #000;
+}
+#contact > forum > input:focus,
+#contact > forum > textarea:focus {
+  outline: none;
+}
+#contact > forum > input::placeholder,
+#contact > forum > textarea::placeholder {
+  color: #cecece;
+}
+footer {
+  margin-top: 2.85rem;
+  background-color: #9b59b6;
+  height: 15rem;
+}
+footer > div {
+  position: relative;
+  top: -1.9rem;
+  display: flex;
+  justify-content: space-between;
+  width: 48rem;
+  margin: 0 auto;
+}
+footer > div > a {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: #fff;
+  border: solid 6px rgba(155, 89, 182, 0.59);
+  background-clip: padding-box;
+}
+footer > div > a:hover {
+  border-color: #9b59b6;
+}
+footer > div > a > img {
+  margin: auto;
+}
+footer > span {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 2.55rem auto;
+  font-family: 'Rokkitt', serif;
+  font-size: 1.4rem;
+  word-spacing: -3.5px;
+}
+/*# sourceMappingURL=style.css.map */
